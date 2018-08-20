@@ -1,0 +1,288 @@
+<!-- Header Start -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.header,
+.footer{
+  min-height: 560px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  background: url("https://s-media-cache-ak0.pinimg.com/736x/36/69/82/366982a0a17c32808ff32fdb2d070787.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.footer{
+  min-height: 380px;
+}
+.form{
+  background: rgba(0,0,0,0.5) !important;
+}
+.form > div{
+  margin-bottom: 0;
+}
+.form *{
+  transition: none;
+}
+.form select{
+  border-left-color: #dedede !important;
+}
+.push-top{
+  margin-top: 90px;
+}
+.addon-append input,
+.addon-append .btn{
+  border-radius: 0;
+  font-size: 17px !important;
+}
+.social{
+  border-top: 1px solid rgba(255,255,255,0.16);
+}
+
+/* __ colors __ */
+
+.light-silver{
+  background: #e8e8e8;
+}
+
+.rgba{
+  background: rgba(0,0,0,0.7);
+  min-height: 380px;
+}
+
+@media (max-width: 800px){
+  .navbar{
+    background: #2196F3;
+  }
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: GOLDENROD;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+</style>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+{% block content %}
+<div class="row header" align="Right">
+  <div class="dropdown" align="Right">
+  <button class="dropbtn" align="Right" style="height: 50px;width: 100px;border-radius:20px; ">ROBIN </button>
+  <div class="dropdown-content">
+    <center><a href="{% url 'dummyapp:register_robin' %}" >Register</a></center>
+    <center><a href="{% url 'dummyapp:login_robin' %}">Login</a></center>
+  </div>
+  </div>
+  <div class="dropdown">
+  <button class="dropbtn" style="height: 50px;width: 100px;border-radius:20px; ">KARMA</button>
+  <div class="dropdown-content">
+    <center><a href="{% url 'dummyapp:calculate_points' %}">View Points</a></center>
+  </div>
+</div>
+<div class="dropdown">
+   <button type="button" class="dropbtn" data-toggle="modal" data-target="#myModal" style="height: 50px;width: 150px;border-radius:20px; ">ABOUT US</button>
+</div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Robin Hood Army</h4>
+        </div>
+        <div class="modal-body">
+          <p>The Robin Hood Army is a volunteer based organisation that works to get surplus food from restaurants to the less fortunate sections of society in cities across India and 12 other countries. The organisation consists of over 14,000+ volunteers spread across 60+ cities, and have served food to over 5,160,741+ people so far.The volunteers people from all walks of life. The lesser fortunate sections who the organisation reaches out to include homeless families, orphanages, night shelters, homes for abandoned children, patients from public hospitals, etc.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+    <div class="dropdown">
+  <button class="dropbtn" style="height: 50px;width: 150px;border-radius:20px; ">HELP CENTRE</button>
+  <div class="dropdown-content">
+    <center><a href="{% url 'dummyapp:faq' %}">FAQ</a></center>
+    <center><a href="{% url 'dummyapp:askq' %}">Ask question</a></center>
+
+    </div>
+  </div>
+
+
+<!-- Row Intro Start -->
+  <div class="row text-center padding-bottom-40 push-top">
+ <center> <img src="https://robinhoodarmy.com/wp-content/uploads/2017/03/RHA-Logo.png"  height="100px" width="500px"></center>
+    <h3><p class="text-white" align="center" style="color: white">Serve the hungry citizens
+    </p></h3>
+
+  </div>
+
+  <!-- Row Intro End -->
+<center>
+  <!-- Search Form Start -->
+<br><br>
+  <div class="wrapper960 center">
+    <form class="form l padding-10 cf">
+
+
+
+  <button class="dropbtn" style="height: 50px;width: 200px;border-radius:20px;">  <a href="/create_food_record">DONATE</a></button>
+
+
+
+
+</center>
+</div><p>.</p>
+<div style="background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2D4qaQWLUz9CB_VbR7UlJ04MtmzWl7-crDoYud2NF40mwYT4taw);">
+<center>
+<div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT49Qt-lD0oxRevfDbEMCXwyxwMP7I7s19RXpDsIJ4L9aan2oE6Ug" class="img-rounded">
+  <center>
+    <br><p class="text-success">Bollywood celebrities,industrialists,social workers and tycoons in India are becoming a part of Robin Hood Army and becoming the change makers of the developing India.The promotions made by these people made the young and energetic people of service mind make their own efforts for the improvement of the society.</p></center>
+<br>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI3buU-HGCiyate5HfP63iLQb8E-S-olFANkLQKDnOp89tMYiE7w" height="500px" width="500px" class="img-thumbnail">
+  <br>
+</div>
+  </center>
+  </div>
+
+<!-- Header End -->
+<p>.</p>
+
+<!-- Content Start -->
+<div style="background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2D4qaQWLUz9CB_VbR7UlJ04MtmzWl7-crDoYud2NF40mwYT4taw);">
+
+<div class="wrapper960 center padding-v-40 tablet-padding">
+  <!-- First Row Start -->
+  <div class="row flex padding-bottom-20">
+    <div class="col-7">
+      <img class="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJmEvOko7c7OrcBlYPOn3PkUMdEvawesD1JaQLZ4cIRnaZ31VK"/>
+    </div>
+
+  </div>
+  </center>
+
+  <p>.</p>
+
+  <!-- First Row End -->
+
+  <!-- Second Row Start -->
+  <div class="row padding-v-40 tablet-padding-top col-gutter-20">
+
+    <center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSZG6BpppiIVBlb-UGxVIG20zaTsQVZafuUoZ7dWCB2qh7cW8V"/>
+    </center>
+
+<!--TEXT HERE-->
+
+
+    <!-- Item Start -->
+
+    <div class="row padding-v-40 tablet-padding-top col-gutter-20">
+
+       <center>
+         <iframe width="768" height="800" style="border:none;" src="http://output13.rssinclude.com/output?type=iframe&amp;id=1189503&amp;hash=b3056bea1ff2a9cd259c65add7c04434"></iframe>
+       </center>
+
+    </div>
+
+    <p>.</p>
+  </div>
+  <!-- Row Rgba End -->
+
+</div>
+</center>
+</a>
+</div>
+</div>
+</div>
+{% endblock content %}
+</body>
+<!-- Forth Row End -->
+<script>
+
+
+function dateTime () {
+
+  var time  = document.getElementById("time");
+  var currentDate = document.getElementById("date");
+  var date = new Date();
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var seconds = date.getSeconds();
+  var month = date.getMonth() + 1;
+  var day = date.getDate();
+  var year = date.getFullYear();
+
+  //sets the time status 'pm' or 'am' depending on the time of the day
+  var amPM = hours >= 12 ? 'pm' : 'am';
+
+  //sets hours to be 12 when it hits zero
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+
+  // if minutes is less than 10 then we add zero to make it double digit like realistic digital clocks
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  var timeString = hours + ":" + minutes + ":" + seconds + " " + amPM;
+  time.innerHTML = timeString;
+
+  var dateString = month + "-" + day + "-" + year;
+  currentDate.innerHTML = dateString;
+}
+
+setInterval(dateTime, 1000);
+</script>
+</html>

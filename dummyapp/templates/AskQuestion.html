@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ask Question</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<body>
+<p></p>
+<a class="btn btn-success" href="{% url 'dummyapp:home' %}">Home</a>
+<center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc6sEh2Xl-Y8LwutQdb4WmNsa4J3W5smmGYQ9N_R7qKEQMC1x-"/>
+</center>
+<div class="container">
+
+<h2>What is the question regarding?</h2>
+ <div class="dropdown">Others
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Problems in using application</a></li>
+      <li><a href="#">Clarity about RHA</a></li>
+      <li><a href="#">Others</a></li>
+    </ul>
+  </div>
+<div class="form-group">
+  <label for="comment">Question:</label>
+  <textarea class="form-control" rows="5" id="question"></textarea>
+  <p>.</p>
+ <center> <button type="button" class="btn btn-success">Submit</button> <button type="button" class="btn btn-danger">Cancel</button></center>
+</div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.
+min.js"></script>;
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstr
+ap.min.js"></script>
+</body>
+</html>
